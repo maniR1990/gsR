@@ -1,6 +1,13 @@
+$font-stack:Helvetica, sans-serif;
+$primary-color: #363636;
+$text-color : #A8A7A7;
+$secondary-color: #474747;   
+$border-color :#CC527A;
+  
 body {
-    div#root{
-      background-color: #222;
-      color: #8EE4AF;
-    }
+    background-color:  $primary-color ;
+    color: $text-color ;
+    font: 100% $font-stack;
   }
+  
+
