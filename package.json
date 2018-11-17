@@ -1,0 +1,19 @@
+{
+  "name": "gs",
+  "version": "1.0.0",
+  "description": "A simple react application with redux ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maniR1990/gsR.git"
+  },
+  "author": "Mani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maniR1990/gsR/issues"
+  },
+  "homepage": "https://github.com/maniR1990/gsR#readme"
+}
