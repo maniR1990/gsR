@@ -19,19 +19,33 @@ class Home extends React.Component {
                      <button className="counter" onClick={this.props.onIncrement}>+</button>
                      <button className="counter" onClick={this.props.onDecrement}>-</button>
                 </div>
+                <div>
+          <ul>
+            {this.props.history.map(el => (
+              <li 
+                className="historyItem" 
+                key={el.id}
+                onClick={() => this.props.onDelEntry(el.id)}>
+                {el.count}
+              </li>
+            ))}
+          </ul>
+        </div>
             </div>
         );
     }
 }
 const mapStateToProps = (state) => {
     return {
-        count: state.count
+        count: state.count,
+        history: state.history
     }
 }
 const mapDispatchToProps = (dispatch) => {
     return {
         onIncrement: () => dispatch({type:'INCREMENT', value: 1}),
-        onDecrement: () => dispatch({type:'DECREMENT', value: 1})
+        onDecrement: () => dispatch({type:'DECREMENT', value: 1}),
+        onDelEntry: (id) => dispatch({ type: "DEL_ENTRY", id: id})
     }
 }
 
