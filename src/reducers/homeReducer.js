@@ -6,7 +6,7 @@ const initialState = {
 const homeReducer = (state = initialState, action) => {
     const newState = { ...state };
     switch (action.type) {
-        case 'INCREMENT':
+        case 'INCREMENT_ASYNC':
             return {
                 ...state,
                 count: state.count + action.value,

@@ -3,10 +3,11 @@
 //const HtmlWebpackPlugin = require('html-webpack-plugin');
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import "@babel/polyfill";
 
 
 module.exports = {
-  entry: path.join(__dirname,'src','index.js'),
+  entry: ["@babel/polyfill", path.join(__dirname,'src','index.js')],
   output: {
     path: path.join(__dirname,'build'),
     filename: 'index.bundle.js'

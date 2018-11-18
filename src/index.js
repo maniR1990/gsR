@@ -6,21 +6,12 @@ import App from './components/app/app';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import homeReducer from './reducers/homeReducer';
+import createSagaMiddleware from "redux-saga";
+import { watchAgeUp } from "./saga/saga";
 import "style.scss";
-
-const logAction = store => {
-  return next => {
-    return action => {
-      const result = next(action);
-      console.log(
-        `caught in the middleware ${JSON.stringify(store.getState())}`
-      );
-      return result;
-    };
-  };
-};
-const store = createStore(homeReducer, applyMiddleware(logAction));
-
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(homeReducer, applyMiddleware(sagaMiddleware));
+sagaMiddleware.run(watchAgeUp);
 ReactDOM.render(
   <Provider store={store}>
     <App />
