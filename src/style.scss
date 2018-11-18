@@ -10,4 +10,18 @@ body {
     font: 100% $font-stack;
   }
   
-
+.counter{
+  border : 1px solid $border-color;
+  //display: block;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  margin : 5px;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  color: $text-color ;
+  width: 5%;
+  margin:1%;
+  font-weight: bold;
+  font-size : 20px;
+}
